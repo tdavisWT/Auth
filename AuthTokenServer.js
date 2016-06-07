@@ -29,7 +29,7 @@ var app = express();
 // the token.
 
 function getAuthCode(mainResponse, baseUrl, clientId, clientSecret) {
-	var dataString = "client_id=" + clientId + "&client_secret=" + clientSecret + "&grant_type=client_credentials";
+	var dataString = "client_id=" + 'R57eWPf8zHOoszCfbSaIjwsY87GW1SaZ' + "&client_secret=" + 'CilamcZN5wg6wJfo' + "&grant_type=client_credentials";
 
     var headers = {
         "Content-Type": "application/x-www-form-urlencoded"

@@ -22,7 +22,7 @@
 function MyAuthToken(env)
 {
     if (env === "PROD") {
-        this.tokenService = "http://localhost:5000/auth";
+        this.tokenService = "http://whiting-turner-auth.herokuapp.com/auth";
     }
     else if (env === "STG") {
         this.tokenService = "http://localhost:5000/auth-stg";
