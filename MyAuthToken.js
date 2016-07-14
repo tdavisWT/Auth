@@ -63,7 +63,7 @@ MyAuthToken.prototype.value = function()
             console.log("AUTH TOKEN: still valid (" + secsLeft + " secs)");
         }
     }
-    
+    console.log(this.token);
     return this.token;      
 };
 
@@ -86,10 +86,12 @@ MyAuthToken.prototype.get = function()
 
         },
         error: function(jqXHR, textStatus) {
+            alert(textStatus);
+            alert(jqXHR);
             alert("AUTH TOKEN: Failed to get new auth token!");
         }
     });
-    
+
     this.token = retVal;
     this.expires_in = expires_in;
     this.timestamp = Math.round(new Date() / 1000);  // get time in seconds when we retrieved this token
