@@ -29,7 +29,8 @@ var app = express();
 // the token.
 
 function getAuthCode(mainResponse, baseUrl, clientId, clientSecret) {
-	var dataString = "client_id=" + 'R57eWPf8zHOoszCfbSaIjwsY87GW1SaZ' + "&client_secret=" + 'CilamcZN5wg6wJfo' + "&grant_type=client_credentials";
+    var scope="&scope=account:write data:write data:read data:create bucket:update user-profile:read data:search bucket:create bucket:read bucket:update bucket:delete code:all account:read";
+    var dataString = "client_id=" + 'R57eWPf8zHOoszCfbSaIjwsY87GW1SaZ' + "&client_secret=" + 'CilamcZN5wg6wJfo' + "&grant_type=client_credentials" + scope;
 
     var headers = {
         "Content-Type": "application/x-www-form-urlencoded"
